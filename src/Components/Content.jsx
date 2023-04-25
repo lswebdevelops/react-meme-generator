@@ -3,6 +3,9 @@ import React from 'react';
 
 
 function Content(){
+    function handleClick(){
+        console.log("i was clicked");
+    }
     return(
         <div className='content-container'>
             <div className='input-container'>
@@ -10,7 +13,9 @@ function Content(){
             <input className='input-right' placeholder='and take my money'></input>
             </div>
            
-                <button className='btn-meme'>Get a new meme image 
+                <button 
+                onClick={handleClick}
+                className='btn-meme'>Get a new meme image 
                 <img className='img-troll-btn'
                  src={require('../images/image-trollmemehat.png')}
                 />
