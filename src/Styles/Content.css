@@ -1,3 +1,71 @@
-div{
-    background-color: white;
+:root{
+    --main-bg-color:rgb(123,32,158);
+
 }
+
+.content-container{
+    background-color: white;
+    display: flex;
+    padding: 45px;
+    flex-direction: column;
+    gap: 25px;
+}
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-left, .input-right{
+    height: 30px;
+    width: 44%;
+    padding: 4px 0px 4px 10px;
+    border-radius: 5px;
+    border: solid grey 1px;
+    font-family: Inter;
+
+}
+.btn-meme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    padding: 4px 0px 4px 10px;
+    border-radius: 5px;
+    border: solid grey 1px;
+    background-color:var(--main-bg-color);
+    color: white;
+    font-family: Inter;
+
+    gap: 10px;
+}
+.img-troll-btn{
+    height: 30px;
+    border-radius: 50%;
+}
+
+.img-content{
+    border-radius: 5px;
+    border: solid grey 1px;
+}
+
+
+/*  mobile */
+
+@media screen and (max-width: 768px) {
+    .content-container {
+    padding: 20px;
+    }
+    
+    .input-left, .input-right {
+    width: 100%;
+    }
+    
+    .btn-meme {
+    font-size: 14px;
+    }
+    
+    .img-troll-btn {
+    height: 20px;
+    }
+    }
