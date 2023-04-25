@@ -1,0 +1,42 @@
+:root{
+    --main-bg-color:rgb(120,31,157);
+
+}
+.navbar-container{
+    display: flex;
+    padding: 10px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+ 
+    background-color: var(--main-bg-color);
+    color: white;
+    padding-bottom: 10px;
+   
+}
+.icon-img-navbar-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    
+    background-color: var(--main-bg-color);
+
+}
+.img-navbar-icon{
+    width: 50px;
+    height: auto;
+    background-color: var(--main-bg-color);
+
+}
+
+.h1-navbar{
+    background-color: var(--main-bg-color);
+    font-weight: 600;
+
+}
+.h3-navbar{
+    background-color: var(--main-bg-color);
+    font-weight: 400;
+
+}
