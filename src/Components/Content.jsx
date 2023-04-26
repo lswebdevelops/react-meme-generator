@@ -34,7 +34,7 @@ function Content() {
       </button>
 
       <img  
-        onMouseOver={darkenImage} 
+        onMouseEnter={darkenImage} 
         onMouseOut={lightenImage}
         className='img-content' 
         src={require(`../images/image-moneyback.png`)} 
