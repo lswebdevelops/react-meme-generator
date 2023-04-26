@@ -4,6 +4,7 @@ import './App.css';
 import Content from './Components/Content';
 
 function App() {
+  
   return (
     <div className="App">
      <Navbar className="app-navbar-container" />

@@ -1,10 +1,16 @@
 import '../Styles/Content.css';
 import React from 'react';
+import memesData from '../Data/memesData'
 
-function Content() {
-  function handleClick() {
-    console.log("I was clicked");
-  }
+function Content(props) {
+ 
+ 
+  function getMemeImage() {
+    const memesArray = memesData.data.memes;
+    const randomNumber = Math.floor(Math.random() * memesArray.length);
+   const url = memesArray[randomNumber].url;
+   console.log(url);
+    }
 
   function darkenImage(event) {
     event.target.classList.add('img-content-dark');
@@ -22,7 +28,7 @@ function Content() {
       </div>
 
       <button 
-        onClick={handleClick}
+        onClick={getMemeImage}
         className='btn-meme'
       >
         Get a new meme image 
