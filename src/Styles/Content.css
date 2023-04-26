@@ -48,8 +48,11 @@
 .img-content{
     border-radius: 5px;
     border: solid grey 1px;
+   
 }
-
+.img-content-dark{
+    filter: brightness(80%);
+}
 
 /*  mobile */
 
