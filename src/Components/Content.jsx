@@ -1,16 +1,20 @@
 import '../Styles/Content.css';
 import React from 'react';
-import memesData from '../Data/memesData'
+import memesData from '../Data/memesData';
 
-function Content(props) {
+function Content() {
  
+
+  const [memeImage, setMemeImage] = React.useState("");
+
  
   function getMemeImage() {
     const memesArray = memesData.data.memes;
     const randomNumber = Math.floor(Math.random() * memesArray.length);
-   const url = memesArray[randomNumber].url;
-   console.log(url);
+    setMemeImage(memesArray[randomNumber].url)
     }
+
+
 
   function darkenImage(event) {
     event.target.classList.add('img-content-dark');
@@ -43,8 +47,8 @@ function Content(props) {
         onMouseEnter={darkenImage} 
         onMouseOut={lightenImage}
         className='img-content' 
-        src={require(`../images/image-moneyback.png`)} 
-        alt="money" 
+        src={memeImage} 
+         alt="meme" 
       />
     </div>
   );
