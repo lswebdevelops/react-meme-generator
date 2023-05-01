@@ -5,41 +5,50 @@ import memesData from '../Data/memesData';
 function Content() {
  
 
-  const [memeImage, setMemeImage] = React.useState("");
+const [meme, setMeme]  =React.useState({
+  topText:"",
+  bottomText:"",
+  randomImage: require('../images/image-take_money.png')
+})
 
- 
-  function getMemeImage() {
-    const memesArray = memesData.data.memes;
-    const randomNumber = Math.floor(Math.random() * memesArray.length);
-    setMemeImage(memesArray[randomNumber].url)
-
-
-    
-    }
+const [allMemeImages, setAllMemeImages] = React.useState(memesData)
 
 
+function getMemeImage(){
+  const memesArray = allMemeImages.data.memes;
+  const randomNumber = Math.floor(Math.random() * memesArray.length);
+  const url = memesArray[randomNumber].url;
+  setMeme(prevMeme => ({
+    ...prevMeme,
+    randomImage: url
+  }))
+}
 
-  // function darkenImage(event) {
-  //   event.target.classList.add('img-content-dark');
-  // }
 
-  // function lightenImage(event) {
-  //   event.target.classList.remove('img-content-dark');
-  // }
-//using toggle instead:
+
+
+
+
+
+
+
 function toggleImage(event){
   event.target.classList.toggle('img-content-dark')
 }
- 
+
+
+
+
   return (
     <div className='content-container'>
       <div className='input-container'>
-        <input className='input-left' placeholder='shut up'></input>
-        <input className='input-right' placeholder='and take my money'></input>
+        <input className='input-left' ></input>
+        <input className='input-right'></input>
       </div>
 
       <button 
         onClick={getMemeImage}
+        
         className='btn-meme'
       >
         Get a new meme image 
@@ -50,20 +59,11 @@ function toggleImage(event){
         />
       </button>
 
-      <img  
-        // onMouseEnter={darkenImage} 
-        // onMouseOut={lightenImage}
+      <img       
+        src={meme.randomImage}
         onMouseEnter={toggleImage}
         onMouseLeave={toggleImage}
-        className='img-content' 
-        // src={memeImage} 
-        //if the meme can't load bring the image: 
-        src={memeImage}
-        onError={(e) => {
-          e.target.onerror = null;
-          e.target.src = require(`../images/image-moneyback.png`);
-        }}
-        alt="meme"
+        className='img-content'  alt=" just a meme"
               
       />
      
