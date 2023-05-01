@@ -642,14 +642,14 @@ export default {
                 "height": 500,
                 "box_count": 2
             },
-            {
-                "id": "183518946",
-                "name": "Blank Transparent Square",
-                "url": "https://i.imgflip.com/319g4i.png",
-                "width": 1000,
-                "height": 1000,
-                "box_count": 2
-            },
+            // {
+            //     "id": "183518946",
+            //     "name": "Blank Transparent Square",
+            //     "url": "https://i.imgflip.com/319g4i.png",
+            //     "width": 1000,
+            //     "height": 1000,
+            //     "box_count": 2
+            // },
             {
                 "id": "29562797",
                 "name": "I'm The Captain Now",
